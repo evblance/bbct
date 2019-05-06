@@ -1,0 +1,5 @@
+// Hamburger variable overrides
+$hamburger-layer-color: $background--dark;
+
+// Import jonsuh hamburgers (https://jonsuh.com/hamburgers/)
+@import "node_modules/hamburgers/_sass/hamburgers/hamburgers";
