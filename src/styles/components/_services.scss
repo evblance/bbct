@@ -1,6 +1,7 @@
 // Variables
-$height--icon-cta: 64px;
+$height--icon-cta: 50px;
 $height--services: 404px;
+$margin--heading-cta: 35px auto 0;
 $padding-top--cta: 41px;
 $width--cta: 220px;
 
@@ -24,10 +25,11 @@ $width--cta: 220px;
 
   &__heading {
     text-transform: uppercase;
-    margin-bottom: 0;
+    margin: $margin--heading-cta;
   }
 
   &__icon {
+    align-self: center; // We need to prevent default stretching of icon as flex child
     height: $height--icon-cta;
   }
 
