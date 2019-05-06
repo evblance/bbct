@@ -16,10 +16,10 @@ describe(`ServiceCTA component`, () => {
     expect(wrapper.length).toBe(1);
   });
 
-  it(`should contain at least one ServiceCTA component`, () => {
+  it(`should contain at exactly three ServiceCTA components`, () => {
     const wrapper = component.find(ServiceCTA);
     expect(wrapper).toBeDefined();
-    expect(wrapper.length).toBeGreaterThanOrEqual(1);
+    expect(wrapper.length).toBe(3);
   });
 
 });

@@ -10,7 +10,19 @@ const Services: React.FC = () => {
       <ServiceCTA
         icon=""
         heading="Consult"
-        text="Helping you make the right choices to solve critical business challenges"
+        text="Helping you make the right choices to solve critical business challenges."
+        linkTarget="/"
+      />
+      <ServiceCTA
+        icon=""
+        heading="Implement"
+        text="Implementing great IT solutions first time."
+        linkTarget="/"
+      />
+      <ServiceCTA
+        icon=""
+        heading="Manage"
+        text="Monitoring, managing and optimising your IT platform."
         linkTarget="/"
       />
     </div>
