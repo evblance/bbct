@@ -1,0 +1,14 @@
+// Variables
+$height--footer: 162px;
+$height--footer-decoration: 29px;
+
+.site-footer {
+  background: linear-gradient(
+    180deg,
+    $background--dark 0%,
+    $background--dark $height--footer-decoration,
+    $background--light $height--footer-decoration,
+    $background--light 100%
+  );
+  height: $height--footer;
+}
