@@ -4,13 +4,18 @@ $height--hero-wedge: 175px;
 $font-size--hero-carousel-heading: 3.3rem;
 $font-size--hero-carousel-subheading: 1.1rem;
 $left-offset--hero-carousel-progress: 560px;
+$left-offset--hero-image--mobile: -40px;
 $margin--hero-carousel: 129px auto auto 30px;
+$margin--hero-carousel--tablet: 30px auto auto 30px;
+$margin--hero-carousel--mobile: 15px auto 0;
 $margin--hero-carousel-subheading: 38px 0 0;
 $margin-top--hero-carousel-progress: 66px;
 $margin--hero-carousel-progress-circle: 0 3px;
 $right-offset--hero-image: -420px;
 $size--hero-carousel-progress-circle: 14px;
 $top-offset--hero-image: 90px;
+$top-offset--hero-image--tablet: 200px;
+$top-offset--hero-image--mobile: -220px;
 $transition--hero-carousel-progress-circle: background 0.3s ease-in-out;
 
 .carousel-progress {
@@ -36,6 +41,19 @@ $transition--hero-carousel-progress-circle: background 0.3s ease-in-out;
     &--active {
       background: $background--primary;
     }
+  }
+}
+@media screen and (max-width: $bp-mw--laptop) {
+  .carousel-progress {
+    left: 0;
+  }
+}
+@media screen and (max-width: $bp-mw--mobile) {
+  .carousel-progress {
+    left: 50%;
+    position: absolute;
+    top: -100px;
+    transform: translateX(-50%);
   }
 }
 
@@ -66,6 +84,25 @@ $transition--hero-carousel-progress-circle: background 0.3s ease-in-out;
     width: 100%;
   }
 }
+@media screen and (max-width: $bp-mw--tablet) {
+  .hero {
+
+    &__img {
+      top: $top-offset--hero-image--tablet;
+    }
+  }
+}
+@media screen and (max-width: $bp-mw--mobile) {
+  .hero {
+
+    &__img {
+      left: $left-offset--hero-image--mobile;
+      opacity: 0.25;
+      position: relative;
+      top: $top-offset--hero-image--mobile;
+    }
+  }
+}
 
 .hero-carousel {
   margin: $margin--hero-carousel;
@@ -81,6 +118,25 @@ $transition--hero-carousel-progress-circle: background 0.3s ease-in-out;
     font-family: $font-family--primary;
     font-size: $font-size--hero-carousel-subheading;
     margin: $margin--hero-carousel-subheading;
+  }
+}
+@media screen and (max-width: $bp-mw--tablet) {
+  .hero-carousel {
+    margin: $margin--hero-carousel--tablet;
+  }
+}
+@media screen and (max-width: $bp-mw--mobile) {
+  .hero-carousel {
+    margin: $margin--hero-carousel--mobile;
+
+    &__heading {
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    &__subheading {
+      text-align: center;
+    }
   }
 }
 
