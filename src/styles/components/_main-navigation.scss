@@ -4,9 +4,15 @@ $colour--main-menu: $background--light;
 $height--main-menu-item: 42px;
 $padding--main-menu-item: 15px 0;
 $right-offset--main-menu: 31px;
-$transition-delay--main-menu: 0.25s;
+$transition-delay--main-menu: 0.5s;
 $transition-easing--main-menu: ease;
+$transition-delay--main-menu-link: 0.25s;
+$transition-easing--main-menu-link: ease;
+$transition-delay--mobile-toggle: 0.8s;
+$transition-easing--mobile-toggle: ease;
 $width--main-menu-item: 120px;
+$z-index--main-menu: 1;
+$z-index--mobile-toggle: 2;
 
 .main-menu {
   bottom: 0;
@@ -32,12 +38,54 @@ $width--main-menu-item: 120px;
     padding: $padding--main-menu-item;
     text-decoration: none;
     transition:
-      background $transition-delay--main-menu $transition-easing--main-menu,
-      color $transition-delay--main-menu $transition-easing--main-menu;
+      background $transition-delay--main-menu-link $transition-easing--main-menu-link,
+      color $transition-delay--main-menu-link $transition-easing--main-menu-link;
     
     &:hover {
       background: $background--main-menu;
       color: $colour--main-menu;
+    }
+  }
+}
+@media screen and (max-width: $bp-mw--tablet) {
+  .main-menu {
+    flex-flow: column nowrap;
+    position: relative;
+    right: 0;
+    top: -1000px;
+    transition: top $transition-delay--main-menu $transition-easing--main-menu;
+    width: 100vw;
+    z-index: $z-index--main-menu;
+
+    &--active {
+      top: 0;
+    }
+
+    &__item {
+      width: 100%;
+    }
+  }
+}
+
+.mobile-toggle {
+  display: none;
+
+  .hamburger {
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+@media screen and (max-width: $bp-mw--tablet) {
+  .mobile-toggle {
+    display: inline-block;
+    position: relative;
+    transition: transform $transition-delay--mobile-toggle $transition-easing--mobile-toggle;
+    z-index: $z-index--mobile-toggle;
+
+    &--active {
+      transform: translateX(calc(50vw - 50%));
     }
   }
 }
