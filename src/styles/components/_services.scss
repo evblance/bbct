@@ -9,7 +9,7 @@ $width--cta: 220px;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  height: $height--services;
+  min-height: $height--services;
   margin: 0 auto;
   max-width: $max-width--site-content;
 }
