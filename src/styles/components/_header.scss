@@ -1,9 +1,15 @@
 // Variables
 $height--site-header: 124px;
+$height--site-header--tablet: 60px;
 
 .site-header {
   height: $height--site-header;
   margin: 0 auto;
   max-width: $max-width--site-content;
   position: relative;
+}
+@media screen and (max-width: $bp-mw--tablet) {
+  .site-header {
+    height: $height--site-header--tablet;
+  }
 }
