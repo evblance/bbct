@@ -1,0 +1,43 @@
+// Variables
+$background--main-menu: #000;
+$colour--main-menu: $background--light;
+$height--main-menu-item: 42px;
+$padding--main-menu-item: 15px 0;
+$right-offset--main-menu: 31px;
+$transition-delay--main-menu: 0.25s;
+$transition-easing--main-menu: ease;
+$width--main-menu-item: 120px;
+
+.main-menu {
+  bottom: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  font-family: $font-family--primary;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: $right-offset--main-menu;
+
+  &__item {
+    text-align: center;
+    text-transform: uppercase;
+    width: $width--main-menu-item;
+  }
+
+  &__link {
+    background: $colour--main-menu;
+    color: $background--main-menu;
+    display: block;
+    padding: $padding--main-menu-item;
+    text-decoration: none;
+    transition:
+      background $transition-delay--main-menu $transition-easing--main-menu,
+      color $transition-delay--main-menu $transition-easing--main-menu;
+    
+    &:hover {
+      background: $background--main-menu;
+      color: $colour--main-menu;
+    }
+  }
+}
