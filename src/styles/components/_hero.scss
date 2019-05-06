@@ -1,0 +1,93 @@
+// Variables
+$height--hero: 629px;
+$height--hero-wedge: 175px;
+$font-size--hero-carousel-heading: 3.3rem;
+$font-size--hero-carousel-subheading: 1.1rem;
+$left-offset--hero-carousel-progress: 560px;
+$margin--hero-carousel: 129px auto auto 30px;
+$margin--hero-carousel-subheading: 38px 0 0;
+$margin-top--hero-carousel-progress: 66px;
+$margin--hero-carousel-progress-circle: 0 3px;
+$right-offset--hero-image: -420px;
+$size--hero-carousel-progress-circle: 14px;
+$top-offset--hero-image: 90px;
+$transition--hero-carousel-progress-circle: background 0.3s ease-in-out;
+
+.carousel-progress {
+  display: inline-block;
+  left: $left-offset--hero-carousel-progress;
+  margin-top: $margin-top--hero-carousel-progress;
+  position: relative;
+
+  &__circle {
+    background: $background--muted;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    height: $size--hero-carousel-progress-circle;
+    margin: $margin--hero-carousel-progress-circle;
+    transition: $transition--hero-carousel-progress-circle;
+    width: $size--hero-carousel-progress-circle;
+
+    &:hover {
+      background: $background--dark;
+    }
+
+    &--active {
+      background: $background--primary;
+    }
+  }
+}
+
+.hero {
+  height: $height--hero;
+  position: relative;
+
+  &__header {
+    margin: 0 auto;
+    max-width: $max-width--site-content;
+    position: relative;
+  }
+
+  &__img {
+    position: absolute;
+    right: $right-offset--hero-image;
+    top: $top-offset--hero-image;
+    user-select: none;
+    z-index: -1;
+  }
+
+  &__wedge {
+    bottom: 0;
+    fill: $background--primary;
+    height: $height--hero-wedge;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+}
+
+.hero-carousel {
+  margin: $margin--hero-carousel;
+
+  &__heading {
+    font-family: $font-family--primary;
+    font-size: $font-size--hero-carousel-heading;
+    text-transform: uppercase;
+  }
+
+  &__subheading {
+    color: $text--muted;
+    font-family: $font-family--primary;
+    font-size: $font-size--hero-carousel-subheading;
+    margin: $margin--hero-carousel-subheading;
+  }
+}
+
+.section--hero {
+  /*
+   * Prevents horizontal scrolling across viewport widths due to
+   * absolute positioning of hero image
+   */
+  overflow: hidden;
+}

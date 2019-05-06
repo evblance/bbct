@@ -1,4 +1,5 @@
 import React from 'react';
+import Hero from './components/Hero/Hero';
 import Services from './components/Services/Services';
 
 /**
@@ -7,6 +8,9 @@ import Services from './components/Services/Services';
 const HomeView: React.FC = () => {
   return (
     <div data-test="HomeViewComponent">
+      <section className="section section--hero">
+        <Hero />
+      </section>
       <section className="section section--services">
         <Services />
       </section>
