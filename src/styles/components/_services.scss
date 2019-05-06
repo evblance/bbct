@@ -1,0 +1,44 @@
+// Variables
+$height--icon-cta: 50px;
+$height--services: 404px;
+$margin--heading-cta: 35px auto 0;
+$padding-top--cta: 41px;
+$width--cta: 220px;
+
+.services {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  height: $height--services;
+  margin: 0 auto;
+  max-width: $max-width--site-content;
+}
+
+.service-cta {
+  color: $text--light;
+  display: flex;
+  flex-flow: column nowrap;
+  font-family: $font-family--secondary;
+  padding-top: $padding-top--cta;
+  text-align: center;
+  width: $width--cta;
+
+  &__heading {
+    text-transform: uppercase;
+    margin: $margin--heading-cta;
+  }
+
+  &__icon {
+    align-self: center; // We need to prevent default stretching of icon as flex child
+    height: $height--icon-cta;
+  }
+
+  &__link {
+    color: $link--primary;
+    font-weight: bold;
+  }
+}
+
+.section--services {
+  background: $background--primary;
+}
