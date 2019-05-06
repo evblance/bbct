@@ -11,19 +11,19 @@ const Services: React.FC = () => {
   return (
     <div className="services" data-test="ServicesComponent">
       <ServiceCTA
-        icon=""
+        icon={consultIcon}
         heading="Consult"
         text="Helping you make the right choices to solve critical business challenges."
         linkTarget="/"
       />
       <ServiceCTA
-        icon=""
+        icon={implementIcon}
         heading="Implement"
         text="Implementing great IT solutions first time."
         linkTarget="/"
       />
       <ServiceCTA
-        icon=""
+        icon={manageIcon}
         heading="Manage"
         text="Monitoring, managing and optimising your IT platform."
         linkTarget="/"
