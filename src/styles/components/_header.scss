@@ -1,0 +1,9 @@
+// Variables
+$height--site-header: 124px;
+
+.site-header {
+  height: $height--site-header;
+  margin: 0 auto;
+  max-width: $max-width--site-content;
+  position: relative;
+}
