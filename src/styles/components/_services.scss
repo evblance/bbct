@@ -2,6 +2,7 @@
 $height--icon-cta: 50px;
 $height--services: 404px;
 $margin--heading-cta: 35px auto 0;
+$margin-bottom--cta: 50px;
 $padding-top--cta: 41px;
 $width--cta: 220px;
 
@@ -19,6 +20,7 @@ $width--cta: 220px;
   display: flex;
   flex-flow: column nowrap;
   font-family: $font-family--secondary;
+  margin-bottom: $margin-bottom--cta;
   padding-top: $padding-top--cta;
   text-align: center;
   width: $width--cta;
