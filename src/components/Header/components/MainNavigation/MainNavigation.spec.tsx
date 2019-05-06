@@ -22,4 +22,16 @@ describe(`MainNavigation component`, () => {
     expect(wrapper.length).toBe(6);
   });
 
+  it(`has a mobile menu toggling container`, () => {
+    const wrapper = component.find(`[data-test="MobileToggle"]`);
+    expect(wrapper).toBeDefined();
+    expect(wrapper.length).toBe(1);
+  });
+
+  it(`has a mobile menu hamburger`, () => {
+    const wrapper = component.find(`[data-test="Hamburger"]`);
+    expect(wrapper).toBeDefined();
+    expect(wrapper.length).toBe(1);
+  });
+
 });
