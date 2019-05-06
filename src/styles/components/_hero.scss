@@ -3,6 +3,8 @@ $height--hero: 629px;
 $height--hero-wedge: 175px;
 $font-size--hero-carousel-heading: 3.3rem;
 $font-size--hero-carousel-subheading: 1.1rem;
+$font-size--hero-carousel-heading--mobile: 3rem;
+$font-size--hero-carousel-subheading--mobile: 1rem;
 $left-offset--hero-carousel-progress: 560px;
 $left-offset--hero-image--mobile: -40px;
 $margin--hero-carousel: 129px auto auto 30px;
@@ -130,11 +132,13 @@ $transition--hero-carousel-progress-circle: background 0.3s ease-in-out;
     margin: $margin--hero-carousel--mobile;
 
     &__heading {
+      font-size: $font-size--hero-carousel-heading--mobile;
       text-align: center;
       margin-top: 60px;
     }
 
     &__subheading {
+      font-size: $font-size--hero-carousel-subheading--mobile;
       text-align: center;
     }
   }
