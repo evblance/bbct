@@ -111,6 +111,7 @@ $transition--hero-carousel-progress-circle: background 0.3s ease-in-out;
 
   &__heading {
     font-family: $font-family--primary;
+    font-weight: 200;
     font-size: $font-size--hero-carousel-heading;
     text-transform: uppercase;
   }
@@ -119,6 +120,7 @@ $transition--hero-carousel-progress-circle: background 0.3s ease-in-out;
     color: $text--muted;
     font-family: $font-family--primary;
     font-size: $font-size--hero-carousel-subheading;
+    font-weight: 600;
     margin: $margin--hero-carousel-subheading;
   }
 }
