@@ -1,6 +1,8 @@
 // Variables
 $height--icon-cta: 50px;
 $height--services: 404px;
+$font-size--heading-cta: 21px;
+$font-size--text-cta: 16px;
 $margin--heading-cta: 35px auto 0;
 $margin-bottom--cta: 50px;
 $padding-top--cta: 41px;
@@ -26,8 +28,16 @@ $width--cta: 220px;
   width: $width--cta;
 
   &__heading {
+    font-size: $font-size--heading-cta;
+    font-weight: 400;
     text-transform: uppercase;
     margin: $margin--heading-cta;
+  }
+
+  &__text {
+    font-size: $font-size--text-cta;
+    line-height: 1.4rem;
+    letter-spacing: 1px;
   }
 
   &__icon {
@@ -37,7 +47,8 @@ $width--cta: 220px;
 
   &__link {
     color: $link--primary;
-    font-weight: bold;
+    font-weight: 600;
+    letter-spacing: 1px;
   }
 }
 
