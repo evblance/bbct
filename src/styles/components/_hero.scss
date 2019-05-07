@@ -110,6 +110,7 @@ $transition--hero-carousel-progress-circle: background 0.3s ease-in-out;
   margin: $margin--hero-carousel;
 
   &__heading {
+    color: $text--dark;
     font-family: $font-family--primary;
     font-weight: 200;
     font-size: $font-size--hero-carousel-heading;
