@@ -1,6 +1,6 @@
 // Variables
-$background--main-menu: #000;
-$colour--main-menu: $background--light;
+$background--main-menu--hover: $background--primary;
+$background--main-menu: $background--light;
 $height--main-menu-item: 42px;
 $padding--main-menu-item: 15px 0;
 $right-offset--main-menu: 31px;
@@ -32,8 +32,8 @@ $z-index--mobile-toggle: 2;
   }
 
   &__link {
-    background: $colour--main-menu;
-    color: $background--main-menu;
+    background: $background--main-menu;
+    color: $text--dark;
     display: block;
     padding: $padding--main-menu-item;
     text-decoration: none;
@@ -42,8 +42,8 @@ $z-index--mobile-toggle: 2;
       color $transition-delay--main-menu-link $transition-easing--main-menu-link;
     
     &:hover {
-      background: $background--main-menu;
-      color: $colour--main-menu;
+      background: $background--main-menu--hover;
+      color: $background--main-menu;
     }
   }
 }
