@@ -1,6 +1,7 @@
 // Variables
 $background--main-menu--hover: $background--primary;
 $background--main-menu: $background--light;
+$box-shadow--main-navigation: 0 1px 7px 1px rgba(0, 0, 0, 0.15);
 $height--main-menu-item: 42px;
 $padding--main-menu-item: 15px 0;
 $right-offset--main-menu: 31px;
@@ -13,6 +14,18 @@ $transition-easing--mobile-toggle: ease;
 $width--main-menu-item: 120px;
 $z-index--main-menu: 1;
 $z-index--mobile-toggle: 2;
+
+.main-navigation {
+  background: $background--primary;
+  box-shadow: $box-shadow--main-navigation;
+  width: 100%;
+  z-index: $z-index--main-menu;
+}
+@media screen and (max-width: $bp-mw--tablet) {
+  .main-navigation {
+    position: fixed;
+  }
+}
 
 .main-menu {
   bottom: 0;
