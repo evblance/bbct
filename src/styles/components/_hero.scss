@@ -12,6 +12,7 @@ $margin--hero-carousel--tablet: 30px auto auto 30px;
 $margin--hero-carousel--mobile: 15px auto 0;
 $margin--hero-carousel-subheading: 38px 0 0;
 $margin-top--hero-carousel-progress: 66px;
+$margin-top--hero-carousel-progress--mobile: 50px;
 $margin--hero-carousel-progress-circle: 0 3px;
 $right-offset--hero-image: -420px;
 $size--hero-carousel-progress-circle: 14px;
@@ -53,6 +54,7 @@ $transition--hero-carousel-progress-circle: background 0.3s ease-in-out;
 @media screen and (max-width: $bp-mw--mobile) {
   .carousel-progress {
     left: 50%;
+    margin-top: $margin-top--hero-carousel-progress--mobile;
     position: absolute;
     top: -100px;
     transform: translateX(-50%);
@@ -137,7 +139,7 @@ $transition--hero-carousel-progress-circle: background 0.3s ease-in-out;
     &__heading {
       font-size: $font-size--hero-carousel-heading--mobile;
       text-align: center;
-      margin-top: 60px;
+      margin-top: 80px;
     }
 
     &__subheading {
