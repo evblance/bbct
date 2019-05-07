@@ -1,7 +1,7 @@
 import React from 'react';
-import consultIcon from '../../../../assets/images/icons/consult-icon.png';
-import implementIcon from '../../../../assets/images/icons/implement-icon.png';
-import manageIcon from '../../../../assets/images/icons/manage-icon.png';
+import consultIcon from '../../../../assets/images/icons/consult-icon-white.png';
+import implementIcon from '../../../../assets/images/icons/implement-icon-white.png';
+import manageIcon from '../../../../assets/images/icons/manage-icon-white.png';
 import ServiceCTA from './ServiceCTA/ServiceCTA';
 
 /**
