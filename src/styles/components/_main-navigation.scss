@@ -62,8 +62,8 @@ $z-index--mobile-toggle: 2;
 }
 @media screen and (max-width: $bp-mw--tablet) {
   .main-menu {
+    background: $background--light;
     flex-flow: column nowrap;
-    position: relative;
     right: 0;
     top: -1000px;
     transition: top $transition-delay--main-menu $transition-easing--main-menu;
@@ -72,10 +72,20 @@ $z-index--mobile-toggle: 2;
 
     &--active {
       top: 0;
+      position: fixed;
+      padding: 50px 0;
     }
 
     &__item {
       width: 100%;
+
+      &:last-child {
+        border-bottom: 2px solid $text--dark;
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $text--dark;
+      }
     }
   }
 }
@@ -98,6 +108,7 @@ $z-index--mobile-toggle: 2;
     z-index: $z-index--mobile-toggle;
 
     &--active {
+      position: fixed;
       transform: translateX(calc(50vw - 50%));
     }
   }
