@@ -22,6 +22,9 @@ class HeroCarousel extends Component<IProps, IState> {
   private readonly NEXT_SLIDE_DELAY: number = 3000;
   private readonly NUM_SLIDES: number = 3;
 
+  // Determines the horizontal pixel difference used for calculating whether a valid swipe was registered.
+  private readonly SLIDE_THRESHOLD: number = 50;
+
   private sliderIntervalId?: any;
   private sliderResetTimeoutId?: any;
 
@@ -143,14 +146,15 @@ class HeroCarousel extends Component<IProps, IState> {
   }
 
   /**
-   * Determines the horizontal direction of swipe based on the start and end x ordinates.
+   * Determines the horizontal direction of swipe based on the start and end x ordinates. The carousel
+   * will show the next slide to the left when the user swipes right, and vice versa.
    * @param {number} startX The x coordinate where the swipe is considered to have started.
    * @param {number} endX The x coordinate where the swipe is considered to have ended.
    */
   public getSwipeDirection(startX: number, endX: number): ESwipeDirection {
-    if (startX - endX < 0) {
+    if (startX - endX < -this.SLIDE_THRESHOLD) {
       return ESwipeDirection.LEFT;
-    } else if (startX - endX > 0) {
+    } else if (startX - endX > this.SLIDE_THRESHOLD) {
       return ESwipeDirection.RIGHT;
     }
     return ESwipeDirection.INVALID;
