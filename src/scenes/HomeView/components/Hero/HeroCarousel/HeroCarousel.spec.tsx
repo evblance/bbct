@@ -1,8 +1,8 @@
 import { shallow, ShallowWrapper } from 'enzyme';
 import React from 'react';
 import HeroCarousel from './HeroCarousel';
-
-const CAROUSEL_PROGRESS_ACTIVE_CLASSNAME = 'carousel-progress__circle--active';
+import HeroCarouselProgress from './HeroCarouselProgress/HeroCarouselProgress';
+import HeroCarouselSlide from './HeroCarouselSlide/HeroCarouselSlide';
 
 describe(`HeroCarousel component`, () => {
 
@@ -17,42 +17,16 @@ describe(`HeroCarousel component`, () => {
     expect(wrapper.length).toBe(1);
   });
 
-  it(`has a heading`, () => {
-    const wrapper = component.find(`[data-test="Heading"]`);
+  it(`has at least one slide`, () => {
+    const wrapper = component.find(HeroCarouselSlide);
     expect(wrapper).toBeDefined();
-    expect(wrapper.length).toBe(1);
+    expect(wrapper.length).toBeGreaterThanOrEqual(1);
   });
 
-  it(`has a subheading`, () => {
-    const wrapper = component.find(`[data-test="Subheading"]`);
+  it(`has a progress indicator`, () => {
+    const wrapper = component.find(HeroCarouselProgress);
     expect(wrapper).toBeDefined();
     expect(wrapper.length).toBe(1);
-  });
-
-  describe(`progress indicator`, () => {
-
-    let wrapper: ShallowWrapper;
-    beforeEach(() => {
-      wrapper = component.find(`[data-test="Progress"]`);
-    });
-
-    it(`should exist`, () => {
-      expect(wrapper).toBeDefined();
-      expect(wrapper.length).toBe(1);
-    });
-
-    it(`has 3 progress circles`, () => {
-      const circles = wrapper.find(`[data-test="ProgressCircle"]`);
-      expect(circles).toBeDefined();
-      expect(circles.length).toBe(3);
-    });
-
-    it(`has exactly one progress circle active by default`, () => {
-      const activeCircle = wrapper.find(`[data-test="ProgressCircle"]`).find(`.${CAROUSEL_PROGRESS_ACTIVE_CLASSNAME}`);
-      expect(activeCircle).toBeDefined();
-      expect(activeCircle.length).toBe(1);
-    });
-
   });
 
 });
