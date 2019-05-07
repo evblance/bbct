@@ -111,20 +111,29 @@ $transition--hero-carousel-progress-circle: background 0.3s ease-in-out;
 .hero-carousel {
   margin: $margin--hero-carousel;
 
-  &__heading {
-    color: $text--dark;
-    font-family: $font-family--primary;
-    font-weight: 200;
-    font-size: $font-size--hero-carousel-heading;
-    text-transform: uppercase;
-  }
+  &-slide {
 
-  &__subheading {
-    color: $text--muted;
-    font-family: $font-family--primary;
-    font-size: $font-size--hero-carousel-subheading;
-    font-weight: 600;
-    margin: $margin--hero-carousel-subheading;
+    .shown {
+      animation-name: carouselSlideIn;
+      animation-duration: 1s;
+      animation-timing-function: ease-out;
+    }
+
+    &__heading {
+      color: $text--dark;
+      font-family: $font-family--primary;
+      font-weight: 200;
+      font-size: $font-size--hero-carousel-heading;
+      text-transform: uppercase;
+    }
+  
+    &__subheading {
+      color: $text--muted;
+      font-family: $font-family--primary;
+      font-size: $font-size--hero-carousel-subheading;
+      font-weight: 600;
+      margin: $margin--hero-carousel-subheading;
+    }
   }
 }
 @media screen and (max-width: $bp-mw--tablet) {
@@ -136,16 +145,18 @@ $transition--hero-carousel-progress-circle: background 0.3s ease-in-out;
   .hero-carousel {
     margin: $margin--hero-carousel--mobile;
 
-    &__heading {
-      font-size: $font-size--hero-carousel-heading--mobile;
-      text-align: center;
-      margin-top: 80px;
-    }
-
-    &__subheading {
-      font-size: $font-size--hero-carousel-subheading--mobile;
-      padding: 0 0.5rem;
-      text-align: center;
+    &-slide {
+      &__heading {
+        font-size: $font-size--hero-carousel-heading--mobile;
+        text-align: center;
+        margin-top: 80px;
+      }
+  
+      &__subheading {
+        font-size: $font-size--hero-carousel-subheading--mobile;
+        padding: 0 0.5rem;
+        text-align: center;
+      }
     }
   }
 }
