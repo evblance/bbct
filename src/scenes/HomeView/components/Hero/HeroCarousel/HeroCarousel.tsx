@@ -104,6 +104,8 @@ class HeroCarousel extends Component<IProps, IState> {
       const swipeDirection = this.getSwipeDirection(this.startTouchX, this.lastTouchX);
       this.handleCarouselSwipe(swipeDirection);
     }
+    this.startTouchX = undefined;
+    this.lastTouchX = undefined;
   }
 
   /**
