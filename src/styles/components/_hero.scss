@@ -67,12 +67,7 @@ $transition--hero-carousel-progress-circle: background 0.3s ease-in-out;
 
   // Represents the slant at the bottom of hero component
   &:after {
-    border-bottom: $height--hero-wedge solid $background--primary;
-    border-right: 100vw solid transparent;
-    bottom: 0;
-    content: "";
-    position: absolute;
-    right: 0;
+    @include pseudo-bottom-to-left-slant($height--hero-wedge, $background--primary);
   }
 
   &__header {

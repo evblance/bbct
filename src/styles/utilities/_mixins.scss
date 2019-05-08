@@ -1,0 +1,11 @@
+/// Decorative slant via pseudo elements.
+/// @param $height - The maximum height of the slant in the top left corner.
+/// @param $colour - The fill colour of the slant.
+@mixin pseudo-bottom-to-left-slant($height, $colour) {
+  border-bottom: $height solid $colour;
+  border-right: 100vw solid transparent;
+  bottom: 0;
+  content: "";
+  position: absolute;
+  right: 0;
+}
