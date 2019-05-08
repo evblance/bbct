@@ -12,14 +12,6 @@ const Hero: React.FC = () => {
         <HeroCarousel />
         <img className="hero__img" src={heroImg} alt="decorative background" data-test="HeroImg" />
       </header>
-      <svg
-        className="hero__wedge"
-        viewBox="0 0 100 100"
-        xmlns="http://www.w3.org/2000/svg"
-        preserveAspectRatio="none"
-      >
-        <polygon points="100,100 0,100 0,0" />
-      </svg>
     </div>
   );
 };
