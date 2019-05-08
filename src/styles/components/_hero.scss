@@ -78,15 +78,6 @@ $transition--hero-carousel-progress-circle: background 0.3s ease-in-out;
     user-select: none;
     z-index: -1;
   }
-
-  &__wedge {
-    bottom: 0;
-    fill: $background--primary;
-    height: $height--hero-wedge;
-    left: 0;
-    position: absolute;
-    width: 100%;
-  }
 }
 @media screen and (max-width: $bp-mw--tablet) {
   .hero {
