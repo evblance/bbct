@@ -65,6 +65,16 @@ $transition--hero-carousel-progress-circle: background 0.3s ease-in-out;
   height: $height--hero;
   position: relative;
 
+  // Represents the slant at the bottom of hero component
+  &:after {
+    border-bottom: $height--hero-wedge solid $background--primary;
+    border-right: 100vw solid transparent;
+    bottom: 0;
+    content: "";
+    position: absolute;
+    right: 0;
+  }
+
   &__header {
     margin: 0 auto;
     max-width: $max-width--site-content;
